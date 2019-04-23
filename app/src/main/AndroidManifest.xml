@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.gieb.ixtapoli_android">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -15,11 +15,14 @@
 
     <application
         android:allowBackup="true"
-
         android:label="Ixtapoli"
-
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
+        <activity android:name=".registro"></activity>
+        <activity android:name=".MostrarEventos" />
+        <activity android:name=".Rechazado" />
+        <activity android:name=".Espera" />
         <activity android:name=".MainActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -36,9 +39,7 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
         <activity android:name=".index">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,7 +48,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".menu" />
-        <activity android:name=".calendario"></activity>
+        <activity android:name=".calendario" />
     </application>
 
 </manifest>
