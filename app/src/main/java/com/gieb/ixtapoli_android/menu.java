@@ -20,7 +20,7 @@ public class menu extends AppCompatActivity {
     }
 
     public void irMapa(View v){
-        Intent i = new Intent(v.getContext(), MapsActivity.class);
+        Intent i = new Intent(v.getContext(), Map.class);
         startActivity(i);
         finish();
     }
