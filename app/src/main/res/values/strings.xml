@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">IxtaPoli_Android</string>
     <string name="title_activity_maps">Ixtapoli</string>
+    <string name="user_location_permission_not_granted">Permiso no concedido</string>
+    <string name="user_location_permission_explanation">Se necesita aceptar los permisos para habilitar la funcionalidad del mapa</string>
 
     <string-array name="opcRutas">
         <item>Zacatenco</item>
         <item>Santo Tomas</item>
     </string-array>
+    <string name="boton_mapa">INICIAR RECORRIDO</string>
 </resources>

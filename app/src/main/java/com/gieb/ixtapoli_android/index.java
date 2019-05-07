@@ -1,6 +1,8 @@
 package com.gieb.ixtapoli_android;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,15 +16,22 @@ import org.ksoap2.serialization.SoapPrimitive;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
+import java.util.prefs.PreferencesFactory;
+
 public class index extends AppCompatActivity {
 
     EditText usr, contra;
+    SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
         usr = findViewById(R.id.usr);
         contra = findViewById(R.id.psw);
+
+        sharedPreferences = getSharedPreferences("usuarios", Context.MODE_PRIVATE);
+
     }
 
     public void login(View v){
@@ -30,6 +39,7 @@ public class index extends AppCompatActivity {
     }
 
     public void entrarsinlogin(View v){
+        sharedPreferences.edit().putString("nombre", usr.getText().toString().trim());
         Intent i = new Intent(getApplicationContext(), menu.class);
         startActivity(i);
         finish();
